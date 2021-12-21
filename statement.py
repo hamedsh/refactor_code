@@ -8,13 +8,13 @@ class Statement:
     def format_currency(value):
         return f'${value:,.2f}'
 
-    @staticmethod
-    def statement(invoice, plays):
+    def statement(self, invoice, plays):
         total_amount = 0
         volume_credits = 0
         result = {}
         result['plays'] = []
 
+        # while not ["performances"]:
         for perf in invoice["performances"]:
             play = plays[perf["playID"]]
             this_amount = 0

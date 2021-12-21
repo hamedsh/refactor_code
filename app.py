@@ -5,7 +5,8 @@ from statement import Statement
 
 
 def main() -> None:
-    result = Statement.statement(
+    statement_obj = Statement()
+    result = statement_obj.statement(
         json.load(open('invoices.json'))[0],
         json.load(open('plays.json')),
     )
